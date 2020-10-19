@@ -12,7 +12,7 @@ Nearly 1 million people have finished an Ironman-branded full-distance race glob
 
 ## Empirical strategy
 
-Ironman events have several sharp "cutoffs" that generate quasi-random variation in outcomes at the cutoff. 
+Ironman events have several sharp "cutoffs" that generate quasi-random variation in outcomes at the cutoff.
 
 1. World Championship qualification slots: there are finite slots allocated to each age group for the World Championships, which are allocated by finishing position. Because slots are allocated by position and not time, a person can finish mere seconds after a competitor and not qualify for the world championships.
 2. Age group age ranges: those born on January 1st are only a day older than those born on December 31st but may have to race in one age group higher
@@ -23,3 +23,4 @@ These cutoffs allow identification of Local Average Treatment Effects (LATEs), l
 ## Maintainers
 
 * [Zack A. Goodman](https://zagoodman.com)
+* [Heather Song](https://www.linkedin.com/in/heather-song-509083191/)
