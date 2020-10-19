@@ -18,4 +18,8 @@ Ironman events have several sharp "cutoffs" that generate quasi-random variation
 2. Age group age ranges: those born on January 1st are only a day older than those born on December 31st but may have to race in one age group higher
 3. Water temperature: wetsuits are not permitted in races with sufficiently warm water, and hence the cutoff generates exogenous variation in wetsuit legality
 
-These cutoffs allow identification of Local Average Treatment Effects (LATEs), local to those affected by the cutoffs. For example, the estimated effect of wetsuits on swim time would be local to those who attend races on the margin of having a wetsuit-legal swim.
+These cutoffs allow identification of Local Average Treatment Effects (LATEs), local to those affected by the cutoffs. For example, the estimated effect of wetsuits on swim time would be local to those who attend races on the margin of having a wetsuit-legal swim. We estimate these LATEs using a regression discontinuity design.
+
+## Maintainers
+
+* [Zack A. Goodman](https://zagoodman.com)
