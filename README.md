@@ -24,3 +24,9 @@ These cutoffs allow identification of Local Average Treatment Effects (LATEs), l
 
 * [Zack A. Goodman](https://zagoodman.com)
 * [Heather Song](https://www.linkedin.com/in/heather-song-509083191/)
+
+### Repository structure
+- base
+    - data: available to collaborators only
+    - jupyter: jupyter nb files with results stripped
+    - jupyter_html: html versions of jupyter nbs with results preserved
