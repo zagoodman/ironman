@@ -13078,7 +13078,7 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><h1>Table of Contents<span class="tocSkip"></span></h1></p>
-<div class="toc"><ul class="toc-item"><li><span><a href="#Import-and-explore-data" data-toc-modified-id="Import-and-explore-data-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Import and explore data</a></span><ul class="toc-item"><li><span><a href="#Load-race-specific-variables" data-toc-modified-id="Load-race-specific-variables-1.1"><span class="toc-item-num">1.1&nbsp;&nbsp;</span>Load race-specific variables</a></span></li><li><span><a href="#Set-up-RD" data-toc-modified-id="Set-up-RD-1.2"><span class="toc-item-num">1.2&nbsp;&nbsp;</span>Set up RD</a></span></li></ul></li><li><span><a href="#Effect-of-wetsuits" data-toc-modified-id="Effect-of-wetsuits-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Effect of wetsuits</a></span></li><li><span><a href="#Export-html" data-toc-modified-id="Export-html-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Export html</a></span></li></ul></div>
+<div class="toc"><ul class="toc-item"><li><span><a href="#Import-and-explore-data" data-toc-modified-id="Import-and-explore-data-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Import and explore data</a></span></li><li><span><a href="#Effect-of-wetsuits" data-toc-modified-id="Effect-of-wetsuits-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Effect of wetsuits</a></span><ul class="toc-item"><li><span><a href="#Load-race-specific-variables" data-toc-modified-id="Load-race-specific-variables-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Load race-specific variables</a></span></li><li><span><a href="#Set-up-RD" data-toc-modified-id="Set-up-RD-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Set up RD</a></span></li></ul></li><li><span><a href="#Export-html" data-toc-modified-id="Export-html-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Export html</a></span></li></ul></div>
 </div>
 </div>
 </div>
@@ -13108,7 +13108,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/dfm_20201022.csv&#39;</span><span class="p">)</span>
@@ -13172,7 +13172,7 @@ dtype: int64
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -13364,7 +13364,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># integer vars</span>
@@ -13380,7 +13380,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># examine finishers by year</span>
@@ -13644,7 +13644,7 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># number of race-years</span>
@@ -13655,7 +13655,9 @@ dtype: int64
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;racename&#39;</span><span class="p">,</span> <span class="s1">&#39;raceyear&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">raceyear</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">())</span>
 
 <span class="c1"># number of years by race venue</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;venuename&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">racename</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;venuename&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">racename</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="o">-</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">venuename</span> <span class="o">==</span> <span class="s1">&#39;e weymouth&#39;</span><span class="p">,</span> <span class="s1">&#39;venuename&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;weymouth&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">venuename</span> <span class="o">==</span> <span class="s1">&#39;man world championship&#39;</span><span class="p">,</span> <span class="s1">&#39;venuename&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;world championship&#39;</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;venuename&#39;</span><span class="p">,</span> <span class="s1">&#39;raceyear&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">venuename</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
 </pre></div>
 
@@ -13711,65 +13713,64 @@ Name: raceyear, dtype: int64</pre>
 
 
 <div class="output_text output_subarea ">
-<pre>Florida                   10
-Western Australia         10
-Cozumel                   10
-UK                        10
-Austria                   10
-Wisconsin                 10
-South Africa              10
-Louisville                10
-man World Championship    10
-New Zealand               10
-Lake Placid               10
-Canada                    10
-Lanzarote                 10
-Frankfurt                 10
-Arizona                   10
-Australia                 10
-Switzerland               10
-France                     9
-Cairns                     9
-Texas                      9
-Wales                      9
-Brazil                     9
-Sweden                     8
-Coeur d&#39;Alene              8
-Mont-Tremblant             8
-Copenhagen                 7
-Malaysia                   6
-Boulder                    6
-Maryland                   6
-Barcelona                  6
-Chattanooga                6
-Los Cabos                  5
-Taiwan                     5
-Vichy                      5
-Melbourne                  4
-Maastricht-Limburg         4
-Tallinn                    3
-Argentina                  3
-Mallorca                   3
-Santa Rosa                 3
-Japan                      3
-Hamburg                    3
-St George                  3
-Fortaleza                  3
-Italy                      3
-Gurye                      2
-Lake Tahoe                 2
-Norway                     2
-e Weymouth                 2
-Regensburg                 2
-China                      1
-Muskoka                    1
-North Carolina             1
-Ireland                    1
-Weymouth                   1
-Vitoria-Gasteiz            1
-New York                   1
-Vineman                    1
-Philippines                1
+<pre>florida               10
+austria               10
+new zealand           10
+australia             10
+lanzarote             10
+frankfurt             10
+world championship    10
+wisconsin             10
+switzerland           10
+louisville            10
+western australia     10
+cozumel               10
+uk                    10
+south africa          10
+lake placid           10
+arizona               10
+canada                10
+wales                  9
+cairns                 9
+brazil                 9
+france                 9
+texas                  9
+coeur d&#39;alene          8
+mont-tremblant         8
+sweden                 8
+copenhagen             7
+boulder                6
+barcelona              6
+malaysia               6
+maryland               6
+chattanooga            6
+los cabos              5
+vichy                  5
+taiwan                 5
+melbourne              4
+maastricht-limburg     4
+weymouth               3
+mallorca               3
+fortaleza              3
+santa rosa             3
+hamburg                3
+japan                  3
+italy                  3
+st george              3
+argentina              3
+tallinn                3
+norway                 2
+regensburg             2
+lake tahoe             2
+gurye                  2
+ireland                1
+new york               1
+vitoria-gasteiz        1
+vineman                1
+philippines            1
+north carolina         1
+china                  1
+muskoka                1
 Name: venuename, dtype: int64</pre>
 </div>
 
@@ -13781,7 +13782,7 @@ Name: venuename, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># clean swim times: set to zero if swim cancelled</span>
@@ -13834,7 +13835,7 @@ Name: noswim, dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># gen variable to designate races that were shortened or otherwise adjusted</span>
@@ -13896,7 +13897,7 @@ Name: short, dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># check swim finishers per race</span>
@@ -13965,287 +13966,282 @@ Name: short, dtype: float64
   </thead>
   <tbody>
     <tr>
-      <th>Switzerland</th>
+      <th>switzerland</th>
       <td>0.031368</td>
       <td>0.968632</td>
     </tr>
     <tr>
-      <th>France</th>
+      <th>france</th>
       <td>0.030586</td>
       <td>0.969414</td>
     </tr>
     <tr>
-      <th>Lanzarote</th>
+      <th>lanzarote</th>
       <td>0.027810</td>
       <td>0.972190</td>
     </tr>
     <tr>
-      <th>Vichy</th>
+      <th>vichy</th>
       <td>0.026119</td>
       <td>0.973881</td>
     </tr>
     <tr>
-      <th>Brazil</th>
+      <th>brazil</th>
       <td>0.024774</td>
       <td>0.975226</td>
     </tr>
     <tr>
-      <th>Mallorca</th>
+      <th>mallorca</th>
       <td>0.023504</td>
       <td>0.976496</td>
     </tr>
     <tr>
-      <th>Wales</th>
+      <th>wales</th>
       <td>0.023284</td>
       <td>0.976716</td>
     </tr>
     <tr>
-      <th>Boulder</th>
+      <th>boulder</th>
       <td>0.021580</td>
       <td>0.978420</td>
     </tr>
     <tr>
-      <th>South Africa</th>
+      <th>south africa</th>
       <td>0.020699</td>
       <td>0.979301</td>
     </tr>
     <tr>
-      <th>New Zealand</th>
+      <th>new zealand</th>
       <td>0.020279</td>
       <td>0.979721</td>
     </tr>
     <tr>
-      <th>Tallinn</th>
+      <th>tallinn</th>
       <td>0.019505</td>
       <td>0.980495</td>
     </tr>
     <tr>
-      <th>Santa Rosa</th>
+      <th>santa rosa</th>
       <td>0.018843</td>
       <td>0.981157</td>
     </tr>
     <tr>
-      <th>Fortaleza</th>
+      <th>fortaleza</th>
       <td>0.018208</td>
       <td>0.981792</td>
     </tr>
     <tr>
-      <th>Taiwan</th>
+      <th>taiwan</th>
       <td>0.016627</td>
       <td>0.983373</td>
     </tr>
     <tr>
-      <th>Barcelona</th>
+      <th>barcelona</th>
       <td>0.016097</td>
       <td>0.983903</td>
     </tr>
     <tr>
-      <th>e Weymouth</th>
-      <td>0.015927</td>
-      <td>0.984073</td>
-    </tr>
-    <tr>
-      <th>Frankfurt</th>
+      <th>frankfurt</th>
       <td>0.015601</td>
       <td>0.984399</td>
     </tr>
     <tr>
-      <th>Italy</th>
+      <th>italy</th>
       <td>0.015010</td>
       <td>0.984990</td>
     </tr>
     <tr>
-      <th>Arizona</th>
+      <th>arizona</th>
       <td>0.014771</td>
       <td>0.985229</td>
     </tr>
     <tr>
-      <th>Philippines</th>
+      <th>philippines</th>
       <td>0.014605</td>
       <td>0.985395</td>
     </tr>
     <tr>
-      <th>Vitoria-Gasteiz</th>
+      <th>vitoria-gasteiz</th>
       <td>0.011448</td>
       <td>0.988552</td>
     </tr>
     <tr>
-      <th>Cozumel</th>
+      <th>cozumel</th>
       <td>0.011167</td>
       <td>0.988833</td>
     </tr>
     <tr>
-      <th>Austria</th>
+      <th>austria</th>
       <td>0.010591</td>
       <td>0.989409</td>
     </tr>
     <tr>
-      <th>Lake Tahoe</th>
+      <th>weymouth</th>
+      <td>0.010291</td>
+      <td>0.989709</td>
+    </tr>
+    <tr>
+      <th>lake tahoe</th>
       <td>0.010126</td>
       <td>0.989874</td>
     </tr>
     <tr>
-      <th>Maryland</th>
+      <th>maryland</th>
       <td>0.009677</td>
       <td>0.990323</td>
     </tr>
     <tr>
-      <th>Hamburg</th>
+      <th>hamburg</th>
       <td>0.009376</td>
       <td>0.990624</td>
     </tr>
     <tr>
-      <th>Lake Placid</th>
+      <th>lake placid</th>
       <td>0.009371</td>
       <td>0.990629</td>
     </tr>
     <tr>
-      <th>Copenhagen</th>
+      <th>copenhagen</th>
       <td>0.009101</td>
       <td>0.990899</td>
     </tr>
     <tr>
-      <th>Los Cabos</th>
+      <th>los cabos</th>
       <td>0.008937</td>
       <td>0.991063</td>
     </tr>
     <tr>
-      <th>Coeur d'Alene</th>
+      <th>coeur d'alene</th>
       <td>0.008232</td>
       <td>0.991768</td>
     </tr>
     <tr>
-      <th>UK</th>
+      <th>uk</th>
       <td>0.007484</td>
       <td>0.992516</td>
     </tr>
     <tr>
-      <th>Florida</th>
+      <th>florida</th>
       <td>0.006963</td>
       <td>0.993037</td>
     </tr>
     <tr>
-      <th>Vineman</th>
+      <th>vineman</th>
       <td>0.006959</td>
       <td>0.993041</td>
     </tr>
     <tr>
-      <th>Maastricht-Limburg</th>
+      <th>maastricht-limburg</th>
       <td>0.006897</td>
       <td>0.993103</td>
     </tr>
     <tr>
-      <th>Gurye</th>
+      <th>gurye</th>
       <td>0.006875</td>
       <td>0.993125</td>
     </tr>
     <tr>
-      <th>Louisville</th>
+      <th>louisville</th>
       <td>0.006361</td>
       <td>0.993639</td>
     </tr>
     <tr>
-      <th>Wisconsin</th>
+      <th>wisconsin</th>
       <td>0.006314</td>
       <td>0.993686</td>
     </tr>
     <tr>
-      <th>man World Championship</th>
+      <th>world championship</th>
       <td>0.006216</td>
       <td>0.993784</td>
     </tr>
     <tr>
-      <th>Sweden</th>
+      <th>sweden</th>
       <td>0.006059</td>
       <td>0.993941</td>
     </tr>
     <tr>
-      <th>Melbourne</th>
+      <th>melbourne</th>
       <td>0.005362</td>
       <td>0.994638</td>
     </tr>
     <tr>
-      <th>Malaysia</th>
+      <th>malaysia</th>
       <td>0.004448</td>
       <td>0.995552</td>
     </tr>
     <tr>
-      <th>Norway</th>
+      <th>norway</th>
       <td>0.004353</td>
       <td>0.995647</td>
     </tr>
     <tr>
-      <th>Mont-Tremblant</th>
+      <th>mont-tremblant</th>
       <td>0.004176</td>
       <td>0.995824</td>
     </tr>
     <tr>
-      <th>Weymouth</th>
-      <td>0.003881</td>
-      <td>0.996119</td>
-    </tr>
-    <tr>
-      <th>Canada</th>
+      <th>canada</th>
       <td>0.003738</td>
       <td>0.996262</td>
     </tr>
     <tr>
-      <th>Texas</th>
+      <th>texas</th>
       <td>0.003618</td>
       <td>0.996382</td>
     </tr>
     <tr>
-      <th>Japan</th>
+      <th>japan</th>
       <td>0.003466</td>
       <td>0.996534</td>
     </tr>
     <tr>
-      <th>Chattanooga</th>
+      <th>chattanooga</th>
       <td>0.003361</td>
       <td>0.996639</td>
     </tr>
     <tr>
-      <th>Western Australia</th>
+      <th>western australia</th>
       <td>0.003248</td>
       <td>0.996752</td>
     </tr>
     <tr>
-      <th>Cairns</th>
+      <th>cairns</th>
       <td>0.003211</td>
       <td>0.996789</td>
     </tr>
     <tr>
-      <th>Argentina</th>
+      <th>argentina</th>
       <td>0.003018</td>
       <td>0.996982</td>
     </tr>
     <tr>
-      <th>Australia</th>
+      <th>australia</th>
       <td>0.001837</td>
       <td>0.998163</td>
     </tr>
     <tr>
-      <th>Muskoka</th>
+      <th>muskoka</th>
       <td>0.000891</td>
       <td>0.999109</td>
     </tr>
     <tr>
-      <th>Regensburg</th>
+      <th>regensburg</th>
       <td>0.000322</td>
       <td>0.999678</td>
     </tr>
     <tr>
-      <th>St George</th>
+      <th>st george</th>
       <td>0.000213</td>
       <td>0.999787</td>
     </tr>
     <tr>
-      <th>New York</th>
+      <th>new york</th>
       <td>0.000000</td>
       <td>1.000000</td>
     </tr>
     <tr>
-      <th>China</th>
+      <th>china</th>
       <td>0.000000</td>
       <td>1.000000</td>
     </tr>
@@ -14261,8 +14257,123 @@ Name: short, dtype: float64
     <div class="prompt"></div>
 
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-12-08e2bee68a6b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">     10</span>                &#39;Vineman&#39;]
+<span class="ansi-green-fg">     11</span> dfsub <span class="ansi-yellow-intense-fg ansi-bold">=</span> dfsub<span class="ansi-yellow-intense-fg ansi-bold">.</span>loc<span class="ansi-yellow-intense-fg ansi-bold">[</span>dfsub<span class="ansi-yellow-intense-fg ansi-bold">.</span>venuename<span class="ansi-yellow-intense-fg ansi-bold">.</span>isin<span class="ansi-yellow-intense-fg ansi-bold">(</span>venuenames<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 12</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>display<span class="ansi-yellow-intense-fg ansi-bold">(</span>pd<span class="ansi-yellow-intense-fg ansi-bold">.</span>crosstab<span class="ansi-yellow-intense-fg ansi-bold">(</span>dfsub<span class="ansi-yellow-intense-fg ansi-bold">.</span>racename<span class="ansi-yellow-intense-fg ansi-bold">,</span> dfsub<span class="ansi-yellow-intense-fg ansi-bold">.</span>swimtime <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> <span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> normalize<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">&#39;index&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>sort_values<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     13</span> 
+<span class="ansi-green-fg">     14</span> <span class="ansi-red-intense-fg ansi-bold"># check the worst races for DNFs</span>
 
-<div class="output_html rendered_html output_subarea ">
+<span class="ansi-green-intense-fg ansi-bold">C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\frame.py</span> in <span class="ansi-cyan-fg">sort_values</span><span class="ansi-blue-intense-fg ansi-bold">(self, by, axis, ascending, inplace, kind, na_position, ignore_index, key)</span>
+<span class="ansi-green-fg">   5289</span> 
+<span class="ansi-green-fg">   5290</span>             by <span class="ansi-yellow-intense-fg ansi-bold">=</span> by<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">0</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 5291</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>k <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_get_label_or_level_values<span class="ansi-yellow-intense-fg ansi-bold">(</span>by<span class="ansi-yellow-intense-fg ansi-bold">,</span> axis<span class="ansi-yellow-intense-fg ansi-bold">=</span>axis<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   5292</span> 
+<span class="ansi-green-fg">   5293</span>             <span class="ansi-red-intense-fg ansi-bold"># need to rewrap column in Series to apply key function</span>
+
+<span class="ansi-green-intense-fg ansi-bold">C:\ProgramData\Anaconda3\lib\site-packages\pandas\core\generic.py</span> in <span class="ansi-cyan-fg">_get_label_or_level_values</span><span class="ansi-blue-intense-fg ansi-bold">(self, key, axis)</span>
+<span class="ansi-green-fg">   1558</span>             values <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>axes<span class="ansi-yellow-intense-fg ansi-bold">[</span>axis<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>get_level_values<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>_values
+<span class="ansi-green-fg">   1559</span>         <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1560</span><span class="ansi-yellow-intense-fg ansi-bold">             </span><span class="ansi-green-intense-fg ansi-bold">raise</span> KeyError<span class="ansi-yellow-intense-fg ansi-bold">(</span>key<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">   1561</span> 
+<span class="ansi-green-fg">   1562</span>         <span class="ansi-red-intense-fg ansi-bold"># Check for duplicates</span>
+
+<span class="ansi-red-intense-fg ansi-bold">KeyError</span>: 1</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fix kona year and dates for a few races</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman St George 2011&quot;, &#39;konayear&#39;] = 2011</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman St George 2010&quot;, &#39;konayear&#39;] = 2010</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman Regensburg 2011&quot;, &#39;konayear&#39;] = 2011</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman Malaysia 2006&quot;, &#39;konayear&#39;] = 2006</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman Malaysia 2007&quot;, &#39;konayear&#39;] = 2007</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman China 2009&quot;, &#39;konayear&#39;] = 2009</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman China 2010&quot;, &#39;konayear&#39;] = 2010</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman China 2010&quot;, &#39;racedate&#39;] = &quot;14 Mar 2010&quot;</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman China 2009&quot;, &#39;racedate&#39;] = &quot;19 Apr 2009&quot;</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman Malaysia 2006&quot;, &#39;racedate&#39;] = &quot;26 Feb 2006&quot;</span>
+<span class="c1"># df.loc[df.racename == &quot;Ironman Malaysia 2007&quot;, &#39;racedate&#39;] = &quot;24 Feb 2007&quot;</span>
+
+<span class="c1"># df[&#39;konayear&#39;] = np.array(df.konayear, dtype=&#39;int&#39;)</span>
+<span class="c1"># print(df.konayear.isnull().sum())</span>
+<span class="c1"># print(df.konayear.value_counts().sort_index())</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Effect-of-wetsuits">Effect of wetsuits<a class="anchor-link" href="#Effect-of-wetsuits">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[94]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import temp cutoff data</span>
+
+<span class="n">files</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;amateur_cutoff.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;pro_cutoff.csv&#39;</span><span class="p">]</span>
+<span class="n">replace_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;frankfurt (european champs)&#39;</span><span class="p">:</span> <span class="s1">&#39;frankfurt&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;canada penticton&#39;</span><span class="p">:</span> <span class="s1">&#39;canada&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;kona (world champs)&#39;</span><span class="p">:</span> <span class="s1">&#39;world championship&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;italy emilia romagna&#39;</span><span class="p">:</span> <span class="s1">&#39;italy&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;vitoria gasteiz&#39;</span><span class="p">:</span> <span class="s1">&#39;vitoria-gasteiz&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;duisburg&#39;</span><span class="p">:</span> <span class="s1">&#39;70.3 duisburg&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;south africa (african champs)&#39;</span><span class="p">:</span> <span class="s1">&#39;south africa&#39;</span><span class="p">}</span>
+
+<span class="n">dataframes</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">dfcut</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;../data/</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="n">dfcut</span><span class="p">[</span><span class="s1">&#39;venue&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfcut</span><span class="o">.</span><span class="n">venue</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">8</span><span class="p">:]</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+
+    <span class="n">dfcut</span><span class="p">[</span><span class="s1">&#39;venue&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfcut</span><span class="o">.</span><span class="n">venue</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">replace_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">replace_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+    <span class="n">dfcut</span> <span class="o">=</span> <span class="n">dfcut</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">dfcut</span><span class="o">.</span><span class="n">venue</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;70.3&#39;</span><span class="p">),</span>\
+                    <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">dfcut</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span> <span class="o">!=</span> <span class="s1">&#39;race_n&#39;</span><span class="p">]]</span><span class="o">.</span>\
+                    <span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">dataframes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dfcut</span><span class="p">)</span>
+
+<span class="c1"># combine dataframes</span>
+<span class="n">dftemps</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataframes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">dataframes</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">dftemps</span> <span class="o">=</span> <span class="n">dftemps</span><span class="p">[[</span><span class="s1">&#39;venue&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_water_temp&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dftemps</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[94]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -14280,238 +14391,36 @@ Name: short, dtype: float64
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>swimtime</th>
-      <th>False</th>
-      <th>True</th>
-    </tr>
-    <tr>
-      <th>racename</th>
       <th></th>
-      <th></th>
+      <th>venue</th>
+      <th>avg_water_temp</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>Ironman Florida 2018</th>
-      <td>0.022376</td>
-      <td>0.977624</td>
+      <th>0</th>
+      <td>france</td>
+      <td>24.00</td>
     </tr>
     <tr>
-      <th>Ironman Florida 2019</th>
-      <td>0.017011</td>
-      <td>0.982989</td>
+      <th>1</th>
+      <td>vichy</td>
+      <td>25.00</td>
     </tr>
     <tr>
-      <th>Ironman Florida 2010</th>
-      <td>0.008750</td>
-      <td>0.991250</td>
+      <th>2</th>
+      <td>chattanooga</td>
+      <td>25.00</td>
     </tr>
     <tr>
-      <th>Ironman Vineman 2016</th>
-      <td>0.006959</td>
-      <td>0.993041</td>
+      <th>3</th>
+      <td>wisconsin</td>
+      <td>23.89</td>
     </tr>
     <tr>
-      <th>Ironman Florida 2017</th>
-      <td>0.006316</td>
-      <td>0.993684</td>
-    </tr>
-    <tr>
-      <th>Ironman Argentina 2019</th>
-      <td>0.006270</td>
-      <td>0.993730</td>
-    </tr>
-    <tr>
-      <th>Ironman Florida 2013</th>
-      <td>0.003892</td>
-      <td>0.996108</td>
-    </tr>
-    <tr>
-      <th>Ironman Florida 2015</th>
-      <td>0.003725</td>
-      <td>0.996275</td>
-    </tr>
-    <tr>
-      <th>Ironman Florida 2016</th>
-      <td>0.002303</td>
-      <td>0.997697</td>
-    </tr>
-    <tr>
-      <th>Ironman Florida 2012</th>
-      <td>0.001946</td>
-      <td>0.998054</td>
-    </tr>
-    <tr>
-      <th>Ironman Argentina 2017</th>
-      <td>0.000981</td>
-      <td>0.999019</td>
-    </tr>
-    <tr>
-      <th>Ironman St George 2010</th>
-      <td>0.000530</td>
-      <td>0.999470</td>
-    </tr>
-    <tr>
-      <th>Ironman Florida 2011</th>
-      <td>0.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Ironman New York 2012</th>
-      <td>0.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Ironman St George 2011</th>
-      <td>0.000000</td>
-      <td>1.000000</td>
-    </tr>
-    <tr>
-      <th>Ironman St George 2012</th>
-      <td>0.000000</td>
-      <td>1.000000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>finish</th>
-      <th>DNF</th>
-      <th>FIN</th>
-    </tr>
-    <tr>
-      <th>racename</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Ironman Frankfurt 2019</th>
-      <td>0.256975</td>
-      <td>0.743025</td>
-    </tr>
-    <tr>
-      <th>Ironman Wales 2011</th>
-      <td>0.255968</td>
-      <td>0.744032</td>
-    </tr>
-    <tr>
-      <th>Ironman Chattanooga 2016</th>
-      <td>0.253502</td>
-      <td>0.746498</td>
-    </tr>
-    <tr>
-      <th>Ironman Chattanooga 2019</th>
-      <td>0.238532</td>
-      <td>0.761468</td>
-    </tr>
-    <tr>
-      <th>Ironman Ireland 2019</th>
-      <td>0.232406</td>
-      <td>0.767594</td>
-    </tr>
-    <tr>
-      <th>Ironman China 2010</th>
-      <td>0.209091</td>
-      <td>0.790909</td>
-    </tr>
-    <tr>
-      <th>Ironman Lake Tahoe 2013</th>
-      <td>0.206833</td>
-      <td>0.793167</td>
-    </tr>
-    <tr>
-      <th>Ironman Frankfurt 2015</th>
-      <td>0.206233</td>
-      <td>0.793767</td>
-    </tr>
-    <tr>
-      <th>Ironman Canada 2018</th>
-      <td>0.203285</td>
-      <td>0.796715</td>
-    </tr>
-    <tr>
-      <th>Ironman Taiwan 2017</th>
-      <td>0.202532</td>
-      <td>0.797468</td>
-    </tr>
-    <tr>
-      <th>Ironman Switzerland 2010</th>
-      <td>0.194320</td>
-      <td>0.805680</td>
-    </tr>
-    <tr>
-      <th>Ironman St George 2012</th>
-      <td>0.187248</td>
-      <td>0.812752</td>
-    </tr>
-    <tr>
-      <th>Ironman Boulder 2018</th>
-      <td>0.187199</td>
-      <td>0.812801</td>
-    </tr>
-    <tr>
-      <th>Ironman Coeur d'Alene 2015</th>
-      <td>0.186971</td>
-      <td>0.813029</td>
-    </tr>
-    <tr>
-      <th>Ironman Vichy 2015</th>
-      <td>0.182069</td>
-      <td>0.817931</td>
-    </tr>
-    <tr>
-      <th>Ironman Brazil 2012</th>
-      <td>0.181872</td>
-      <td>0.818128</td>
-    </tr>
-    <tr>
-      <th>Ironman Lanzarote 2010</th>
-      <td>0.180777</td>
-      <td>0.819223</td>
-    </tr>
-    <tr>
-      <th>Ironman Malaysia 2019</th>
-      <td>0.180579</td>
-      <td>0.819421</td>
-    </tr>
-    <tr>
-      <th>Ironman Louisville 2018</th>
-      <td>0.178511</td>
-      <td>0.821489</td>
-    </tr>
-    <tr>
-      <th>Ironman Malaysia 2015</th>
-      <td>0.171812</td>
-      <td>0.828188</td>
+      <th>4</th>
+      <td>world championship</td>
+      <td>25.56</td>
     </tr>
   </tbody>
 </table>
@@ -14526,25 +14435,365 @@ Name: short, dtype: float64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[106]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># fix kona year and dates for a few races</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman St George 2011&quot;</span><span class="p">,</span> <span class="s1">&#39;konayear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2011</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman St George 2010&quot;</span><span class="p">,</span> <span class="s1">&#39;konayear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2010</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman Regensburg 2011&quot;</span><span class="p">,</span> <span class="s1">&#39;konayear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2011</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman Malaysia 2006&quot;</span><span class="p">,</span> <span class="s1">&#39;konayear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2006</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman Malaysia 2007&quot;</span><span class="p">,</span> <span class="s1">&#39;konayear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2007</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman China 2009&quot;</span><span class="p">,</span> <span class="s1">&#39;konayear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2009</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman China 2010&quot;</span><span class="p">,</span> <span class="s1">&#39;konayear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2010</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman China 2010&quot;</span><span class="p">,</span> <span class="s1">&#39;racedate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;14 Mar 2010&quot;</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman China 2009&quot;</span><span class="p">,</span> <span class="s1">&#39;racedate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;19 Apr 2009&quot;</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman Malaysia 2006&quot;</span><span class="p">,</span> <span class="s1">&#39;racedate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;26 Feb 2006&quot;</span>
-<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">racename</span> <span class="o">==</span> <span class="s2">&quot;Ironman Malaysia 2007&quot;</span><span class="p">,</span> <span class="s1">&#39;racedate&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;24 Feb 2007&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># merge swim times and swim completion rates from df</span>
 
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;konayear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">konayear</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">konayear</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">konayear</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">())</span>
+<span class="n">ag_divs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;F18-24&#39;</span><span class="p">,</span> <span class="s1">&#39;F25-29&#39;</span><span class="p">,</span> <span class="s1">&#39;F30-34&#39;</span><span class="p">,</span> <span class="s1">&#39;F35-39&#39;</span><span class="p">,</span> <span class="s1">&#39;F40-44&#39;</span><span class="p">,</span> <span class="s1">&#39;F45-49&#39;</span><span class="p">,</span> <span class="s1">&#39;F50-54&#39;</span><span class="p">,</span> 
+           <span class="s1">&#39;F55-59&#39;</span><span class="p">,</span> <span class="s1">&#39;F60-64&#39;</span><span class="p">,</span> <span class="s1">&#39;F65-69&#39;</span><span class="p">,</span> <span class="s1">&#39;F70-74&#39;</span><span class="p">,</span> <span class="s1">&#39;F75-79&#39;</span><span class="p">,</span> <span class="s1">&#39;F80+&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;M18-24&#39;</span><span class="p">,</span> <span class="s1">&#39;M25-29&#39;</span><span class="p">,</span> <span class="s1">&#39;M30-34&#39;</span><span class="p">,</span> <span class="s1">&#39;M35-39&#39;</span><span class="p">,</span> <span class="s1">&#39;M40-44&#39;</span><span class="p">,</span> <span class="s1">&#39;M45-49&#39;</span><span class="p">,</span> <span class="s1">&#39;M50-54&#39;</span><span class="p">,</span> 
+           <span class="s1">&#39;M55-59&#39;</span><span class="p">,</span> <span class="s1">&#39;M60-64&#39;</span><span class="p">,</span> <span class="s1">&#39;M65-69&#39;</span><span class="p">,</span> <span class="s1">&#39;M70-74&#39;</span><span class="p">,</span> <span class="s1">&#39;M75-79&#39;</span><span class="p">,</span> <span class="s1">&#39;M80+&#39;</span><span class="p">,</span> <span class="s1">&#39;M80-84&#39;</span><span class="p">]</span>
+<span class="n">pro_divs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;MPRO&#39;</span><span class="p">,</span> <span class="s1">&#39;FPRO&#39;</span><span class="p">]</span>
+<span class="n">keepvars</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;athleteid&#39;</span><span class="p">,</span> <span class="s1">&#39;gender&#39;</span><span class="p">,</span> <span class="s1">&#39;division&#39;</span><span class="p">,</span> <span class="s1">&#39;raceyear&#39;</span><span class="p">,</span> <span class="s1">&#39;venuename&#39;</span><span class="p">,</span> <span class="s1">&#39;swimtime&#39;</span><span class="p">,</span> <span class="s1">&#39;biketime&#39;</span><span class="p">,</span> <span class="s1">&#39;finish&#39;</span><span class="p">]</span>
+
+
+<span class="c1"># amateurs</span>
+<span class="n">dfam</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">division</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">ag_divs</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">noswim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span> <span class="n">keepvars</span><span class="p">]</span>
+<span class="n">dfam</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;venuename&#39;</span><span class="p">:</span> <span class="s1">&#39;venue&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfam</span> <span class="o">=</span> <span class="n">dfam</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">dftemps</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;venue&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">dfam</span> <span class="o">=</span> <span class="n">dfam</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">dfam</span><span class="o">.</span><span class="n">venue</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;tulsa&#39;</span><span class="p">,</span> <span class="s1">&#39;kalmar&#39;</span><span class="p">])]</span>
+<span class="c1"># print(dfam.venue.value_counts())</span>
+
+<span class="c1"># pros</span>
+<span class="n">dfpro</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">division</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">pro_divs</span><span class="p">))</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">noswim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">),</span> <span class="n">keepvars</span><span class="p">]</span>
+<span class="n">dfpro</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;venuename&#39;</span><span class="p">:</span> <span class="s1">&#39;venue&#39;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">dfpro</span> <span class="o">=</span> <span class="n">dfpro</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">dftemps</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;venue&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">)</span>
+<span class="n">dfpro</span> <span class="o">=</span> <span class="n">dfpro</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">~</span><span class="n">dfpro</span><span class="o">.</span><span class="n">venue</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;kalmar&#39;</span><span class="p">,</span> <span class="s1">&#39;santa rosa&#39;</span><span class="p">,</span> <span class="s1">&#39;tulsa&#39;</span><span class="p">,</span> <span class="s1">&#39;maryland&#39;</span><span class="p">])]</span>
+<span class="c1"># dfpro.venue.value_counts()</span>
+
+
+<span class="c1"># aggregate and plot means by avg water temp</span>
+
+<span class="k">def</span> <span class="nf">agg_df</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">groupbyvars</span><span class="p">,</span> <span class="n">aggf</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Takes dflong and aggregates by groupbyvars the functions in aggf</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">d</span><span class="o">.</span><span class="n">finish</span> <span class="o">!=</span> <span class="s1">&#39;DQ&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="o">~</span><span class="p">((</span><span class="n">d</span><span class="o">.</span><span class="n">finish</span> <span class="o">==</span> <span class="s1">&#39;FIN&#39;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">swimtime</span><span class="o">.</span><span class="n">isnull</span><span class="p">())),</span> <span class="p">:]</span>
+    
+    <span class="c1"># calc if DNF&#39;d on swim</span>
+    <span class="n">d</span><span class="p">[</span><span class="s1">&#39;fin_swim&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">swimtime</span><span class="o">.</span><span class="n">notnull</span><span class="p">(),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    
+    <span class="c1"># calc finish rate by venue and avg swim time</span>
+    <span class="n">dagg</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">groupbyvars</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;swimtime&#39;</span><span class="p">,</span> <span class="s1">&#39;biketime&#39;</span><span class="p">,</span> <span class="s1">&#39;fin_swim&#39;</span><span class="p">,</span> <span class="s1">&#39;avg_water_temp&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">groupbyvars</span><span class="p">)</span><span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">aggf</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+    
+    <span class="k">return</span> <span class="n">dagg</span>
+
+<span class="n">dfam</span> <span class="o">=</span> <span class="n">agg_df</span><span class="p">(</span><span class="n">dfam</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;venue&#39;</span><span class="p">],</span> <span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+<span class="n">dfpro</span> <span class="o">=</span> <span class="n">agg_df</span><span class="p">(</span><span class="n">dfpro</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;venue&#39;</span><span class="p">],</span> <span class="s1">&#39;mean&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[99]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfam</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[99]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>venue</th>
+      <th>swimtime</th>
+      <th>biketime</th>
+      <th>fin_swim</th>
+      <th>avg_water_temp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>australia</td>
+      <td>4211.017739</td>
+      <td>22778.488615</td>
+      <td>0.999689</td>
+      <td>23.000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>barcelona</td>
+      <td>4565.884253</td>
+      <td>20307.053709</td>
+      <td>0.996828</td>
+      <td>22.000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>cairns</td>
+      <td>4695.263476</td>
+      <td>22104.829000</td>
+      <td>0.998745</td>
+      <td>23.000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>canada</td>
+      <td>4773.694939</td>
+      <td>24083.263704</td>
+      <td>0.998287</td>
+      <td>23.000</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>chattanooga</td>
+      <td>4013.334193</td>
+      <td>23991.344572</td>
+      <td>0.999236</td>
+      <td>25.000</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>florida</td>
+      <td>5016.429080</td>
+      <td>22410.590761</td>
+      <td>0.996879</td>
+      <td>21.685</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>france</td>
+      <td>4493.318445</td>
+      <td>23092.122899</td>
+      <td>0.994951</td>
+      <td>24.000</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>frankfurt</td>
+      <td>4583.197103</td>
+      <td>21313.700714</td>
+      <td>0.995654</td>
+      <td>23.000</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>hamburg</td>
+      <td>4721.667446</td>
+      <td>21459.017362</td>
+      <td>0.996969</td>
+      <td>21.000</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>italy</td>
+      <td>4358.577413</td>
+      <td>21263.052322</td>
+      <td>0.998741</td>
+      <td>22.000</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>lake placid</td>
+      <td>4673.662035</td>
+      <td>24596.662469</td>
+      <td>0.994312</td>
+      <td>22.210</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>maryland</td>
+      <td>4924.849309</td>
+      <td>22615.837754</td>
+      <td>0.995326</td>
+      <td>22.220</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>mont-tremblant</td>
+      <td>4853.800168</td>
+      <td>23293.065264</td>
+      <td>0.997653</td>
+      <td>20.000</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>santa rosa</td>
+      <td>5085.320588</td>
+      <td>23726.844072</td>
+      <td>0.990291</td>
+      <td>23.330</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>south africa</td>
+      <td>4605.795350</td>
+      <td>23617.404162</td>
+      <td>0.982718</td>
+      <td>20.000</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>texas</td>
+      <td>5235.789292</td>
+      <td>22275.281379</td>
+      <td>0.998608</td>
+      <td>27.780</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>uk</td>
+      <td>4857.142885</td>
+      <td>24863.357900</td>
+      <td>0.998065</td>
+      <td>19.000</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>vichy</td>
+      <td>4987.919496</td>
+      <td>21754.883056</td>
+      <td>0.985224</td>
+      <td>25.000</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>vitoria-gasteiz</td>
+      <td>4516.674105</td>
+      <td>20759.255730</td>
+      <td>0.996489</td>
+      <td>21.000</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>western australia</td>
+      <td>4563.911850</td>
+      <td>21571.904911</td>
+      <td>0.998553</td>
+      <td>20.000</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>wisconsin</td>
+      <td>5035.428353</td>
+      <td>24117.150815</td>
+      <td>0.996312</td>
+      <td>23.890</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>world championship</td>
+      <td>4436.043237</td>
+      <td>20937.757683</td>
+      <td>0.999118</td>
+      <td>25.560</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[107]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># scatter temp vs time</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">dfam</span><span class="o">.</span><span class="n">avg_water_temp</span><span class="p">,</span> <span class="n">dfam</span><span class="o">.</span><span class="n">swimtime</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Amateur&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">24.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">dfpro</span><span class="o">.</span><span class="n">avg_water_temp</span><span class="p">,</span> <span class="n">dfpro</span><span class="o">.</span><span class="n">swimtime</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pro&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">21.9</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAX0AAAEICAYAAACzliQjAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuMSwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy/d3fzzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAZy0lEQVR4nO3dcZCU9Z3n8ffnkGBvIplsMRroIYFNlFqRjShLscdm9zSVDFEP57i6PWpjwV22lg3nbRmvgjrnVer2qjhMyG1ca0v3XJMznm4ZcodIuSFowrG1SUGoIWgIGiKJbmRAGbNHhUtGAvi9P/rX2s70zHQz0/089vN5VXXx9Lefp+fXP8dvP/P9/Z7fo4jAzMyK4Z9k3QAzM2sfJ30zswJx0jczKxAnfTOzAnHSNzMrECd9M7MCcdI3MysQJ33raJJ2S/q/kma06P3/jaRvt+K9zVrBSd86lqR5wIeBAFZm25rzI2la1m2wzuKkb51sDbAXeBBYWw1KelDSvZJ2SPp/kr4j6b2S7k5/FfxQ0uKa/e+Q9GNJpyQ9K+lfpPhvAn8F/E56n5MpPkPSFyT9VNIrkv5KUim9NuovA0kh6YM1bbtP0tcl/QK4ppUdZMXjpG+dbA3wSHr0Srqk5rU/AP4TMAs4DewBvpee/y/gz2v2/TGVvxjeDfwZ8LCk2RHxHPApYE9EvCsiutL+nwMuA64EPgiUgc820e4/BDYCFwEuHdmUctK3jiTpd4H3A1siYj+VxP2HNbs8FhH7I+I14DHgtYh4KCLOAV8F3jjTj4ivRcSxiHg9Ir4KPA8sHePnCvhj4NaI+MeIOAX8V2B1E81/PCK+k37ea00cZzYhJ33rVGuBJyPi1fT8b6gp8QCv1GwP13n+ruoTSWskPS3pZCrhXEHlL4J6uoFfA/bX7P+NFG/US03sa9aUC7JugNlUS/XzPwCmSXo5hWcAXZI+1OR7vR/4a+AjVMo45yQ9DSjtMnKZ2lepfGksjIjBOm/5CypfCtX3f2+dfbz0rbWMz/StE/UB54DLqdTVrwR+E/h7KnX+ZryTShIeApD0b6mc6Ve9AvRIegdARLxO5Uvii5IuTseUJfWm/Z8BFkq6UtKFwH9usj1mk+Kkb51oLfA/IuKnEfFy9QH8JfAJmvgLNyKeBf4blYHeV4BFwHdqdtkFHAJellQtJd0OHAH2Svo58E1gQXq/HwH/JcWexwO11mbyTVTMzIrDZ/pmZgXipG9mViBO+mZmBeKkb2ZWILmfpz9r1qyYN29e1s0we9v4ydAvAPiN7ndm3BLL0v79+1+NiFEXBeY+6c+bN4+BgYGsm2H2tvGv//seAL76J7+TcUssS5L+oV7c5R0zswJx0jczKxAnfTOzAnHSNzMrECd9M7MCyf3sHTOzItl2YJDNOw9z7OQwc7pKbOhdQN/i8pS9v5O+mVlObDswSP/WgwyfOQfA4Mlh+rceBJiyxO/yjplZTmzeefiNhF81fOYcm3cenrKf4aRvZpYTx04ONxU/H076ZmY5Maer1FT8fDjpm5nlxIbeBZSmT3tLrDR9Ght6F0zZz2go6Ut6UdJBSU9LGkixzZJ+KOn7kh6T1FWzf7+kI5IO19wbFElXp/c5IukeSarz48zMCqlvcZlNqxZR7iohoNxVYtOqRZnN3rkmIl6tef4U0B8RZyV9DugHbpd0ObAaWAjMAb4p6bKIOAfcB6wD9gJfB1YAO6bgc5iZdYS+xeUpTfIjnXd5JyKejIiz6eleoCdt3wg8GhGnI+IFKjeIXippNjAzIvZE5ca8DwF95990MzNrVqNJP4AnJe2XtK7O65/kzTP2MvBSzWtHU6yctkfGR5G0TtKApIGhoaEGm2hmZhNpNOkvj4irgI8DN0v6veoLku4EzgKPVEN1jo9x4qODEfdHxJKIWNLdPeoeAGZmdp4aSvoRcSz9ewJ4DFgKIGktcAPwiVSygcoZ/Nyaw3uAYyneUyduZmZtMmHSl/ROSRdVt4GPAT+QtAK4HVgZEb+sOWQ7sFrSDEnzgUuBfRFxHDglaVmatbMGeHyKP4+ZmY2jkdk7lwCPpdmVFwB/ExHfkHQEmAE8lV7bGxGfiohDkrYAz1Ip+9ycZu4ArAceBEpUxgA8c8fMrI0mTPoR8RPgQ3XiHxznmI3AxjrxAeCKJttoZmZTxFfkmpkViJO+mVmBOOmbmRWIk76ZWYE46ZuZFYiTvplZgTjpm5kViJO+mVmBOOmbmRWIk76ZWYE0c+css0LbdmCQzTsPc+zkMHO6SmzoXdDSOxyZtYKTvlkDth0YpH/rQYbPVNYOHDw5TP/WgwBO/Pa24vKOWQM27zz8RsKvGj5zjs07D2fUIrPz46Rv1oBjJ4ebipvllZO+WQPmdJWaipvllZO+WQM29C6gNH3aW2Kl6dPY0LsgoxaZnR8P5Jo1oDpY69k79nbnpG/WoL7FZSd5e9tz0jfLgOf8W1ac9M3azHP+LUseyDVrM8/5tyz5TN+mhMsVjfOcf8uSz/Rt0qrlisGTwwRvliu2HRjMumm55Dn/lqWGkr6kFyUdlPS0pIEU+3VJT0l6Pv37npr9+yUdkXRYUm9N/Or0Pkck3SNJU/+RrN1crmiO5/xblpo5078mIq6MiCXp+R3AtyLiUuBb6TmSLgdWAwuBFcC9kqq/4fcB64BL02PF5D+CZc3liub0LS6zadUiyl0lBJS7SmxatcjlMGuLydT0bwT+Wdr+CrAbuD3FH42I08ALko4ASyW9CMyMiD0Akh4C+oAdk2iD5cCcrhKDdRK8yxVjy/Ocf4/PdLZGz/QDeFLSfknrUuySiDgOkP69OMXLwEs1xx5NsXLaHhkfRdI6SQOSBoaGhhpsomXF5YrO4fGZztdo0l8eEVcBHwdulvR74+xbr04f48RHByPuj4glEbGku7u7wSZaVlyu6Bwen+l8DZV3IuJY+veEpMeApcArkmZHxHFJs4ETafejwNyaw3uAYyneUyduHSDP5QprnMdnOt+EZ/qS3inpouo28DHgB8B2YG3abS3weNreDqyWNEPSfCoDtvtSCeiUpGVp1s6ammPMLAc8nbTzNVLeuQT4tqRngH3A30bEN4C7gI9Keh74aHpORBwCtgDPAt8Abo6I6t+L64EHgCPAj/EgrlmueHym801Y3omInwAfqhP/GfCRMY7ZCGysEx8Armi+mWbWDl5CuvN5GQYzewuPz3Q2L8NgZlYgTvpmZgXipG9mViCu6VvueBkAs9Zx0rdc8V2lzFrL5R3LFS8DYNZaTvqWK14GwKy1nPQtV7wMgFlrOelbrngZALPW8kCu5YqXATBrLSd9yx0vA2DWOi7vmJkViJO+mVmBdGR5x1d0mpnV13FJP29XdPoLyMzypOPKO3m6orP6BTR4cpjgzS+gbQcG294WMzPowKSfpys68/QFZGYGHZj083RFZ56+gMzMoAOTfp6u6MzTF5CZGXRg0u9bXGbTqkWUu0oIKHeV2LRqUSaDp3n6AjIzgw6cvQP5uaLTSwqYWd50ZNLPk7x8AZmZQQeWd8zMbGwNJ31J0yQdkPREen6lpL2SnpY0IGlpzb79ko5IOiyptyZ+taSD6bV7JGlqP46ZmY2nmTP9W4Dnap5/HviziLgS+Gx6jqTLgdXAQmAFcK+k6mjmfcA64NL0WDGZxpuZWXMaSvqSeoDrgQdqwgHMTNvvBo6l7RuBRyPidES8ABwBlkqaDcyMiD0REcBDQN/kP4KZmTWq0YHcu4HbgItqYp8Gdkr6ApUvj3+a4mVgb81+R1PsTNoeGR9F0joqfxHwvve9r8EmmpnZRCY805d0A3AiIvaPeGk9cGtEzAVuBb5UPaTO28Q48dHBiPsjYklELOnu7p6oiWbnbduBQZbftYv5d/wty+/a5XWRrOM1cqa/HFgp6TrgQmCmpIeBf06lzg/wNd4s/RwF5tYc30Ol9HM0bY+Mm2UibyuymrXDhGf6EdEfET0RMY/KAO2uiLiJSsL+/bTbtcDzaXs7sFrSDEnzqQzY7ouI48ApScvSrJ01wONT+3HMGucF8ayIJnNx1h8DfyHpAuA1Ug0+Ig5J2gI8C5wFbo6I6v9Z64EHgRKwIz3MMuEF8ayImkr6EbEb2J22vw1cPcZ+G4GNdeIDwBXNNtKsFeZ0lRisk+C9IJ51Ml+Ra4XlBfGsiLz2jhWWF8SzInLSt0LzgnhWNE76BeEbtJsZOOkXguejm1mVB3ILwPPRzazKSb8APB/dzKqc9AvAN2g3syon/QLwfPSxecE1KxoP5BaA56PX5wFuKyIn/YLwfPTRxhvgdl9Zp3LSt1xp5/UEHuC2InJN33KjWm4ZPDlM8Ga5pVV1dg9wWxE56VtutPt6Ag9wWxG5vGO50e5yiwe4rYic9C03sljf3gPcVjQu71huuNxi1no+07fccLnFrPWc9C1XXG4xay2Xd8zMCsRJ38ysQJz0zcwKxDX9FvNtCs0sTxo+05c0TdIBSU/UxP5U0mFJhyR9vibeL+lIeq23Jn61pIPptXskaeo+Sv60e1kBM7OJNFPeuQV4rvpE0jXAjcBvRcRC4AspfjmwGlgIrADulVSdfH0fsA64ND1WTPYD5JlvU2hmedNQ0pfUA1wPPFATXg/cFRGnASLiRIrfCDwaEacj4gXgCLBU0mxgZkTsiYgAHgL6puZj5JNXcTSzvGn0TP9u4Dbg9ZrYZcCHJX1X0t9J+u0ULwMv1ex3NMXKaXtkfBRJ6yQNSBoYGhpqsIn541Uc8893zrKimTDpS7oBOBER+0e8dAHwHmAZsAHYkmr09er0MU58dDDi/ohYEhFLuru7J2pibnlZgXzzmIsVUSNn+suBlZJeBB4FrpX0MJUz9a1RsY/KXwGzUnxuzfE9wLEU76kT71h9i8tsWrWIclcJAeWuEptWLfLsnZzwmIsV0YRJPyL6I6InIuZRGaDdFRE3AduAawEkXQa8A3gV2A6sljRD0nwqA7b7IuI4cErSsvQXwRrg8RZ8Jsu5vJRUPOZiRTSZefpfBr4s6QfAr4C1aYD2kKQtwLPAWeDmiKieTq0HHgRKwI706Fi+8fZoeeqTLJZyNstaU1fkRsTuiLghbf8qIm6KiCsi4qqI2FWz38aI+EBELIiIHTXxgbT/ByLi36cviY7l8sFoeeoTj7lYEfmK3BZy+WC0PPWJl3K2InLSbyGXD0bLW594KWcrGi+41kIuH4zmPjHLls/0W8jlg9HcJ2bZctJvMZcPRnOfmGXHSb8gvMSzmYGTfiHkaW68mWXLA7kFkKe58WaWLZ/pF0Ce5sZbfS6/Wbv4TL8AvMRzvnm1T2snJ/0C8Nz4fHP5zdrJ5Z0C8Nz4fHP5zdrJSb8gPDc+v/K2NIV1Npd3zDLm8pu1k8/0zTLm8pu1k5O+WQ64/Gbt4vKOmVmBOOmbmRWIyztm1jK+0jh/nPTNrCW80F8+ubxjZi3hK43zyUnfzFrCVxrnk5O+mbWEF/rLp4aTvqRpkg5IemJE/DOSQtKsmli/pCOSDkvqrYlfLelgeu0eSZqaj2FmeeMrjfOpmTP9W4DnagOS5gIfBX5aE7scWA0sBFYA90qq/pe/D1gHXJoeK8675WaWa32Ly2xatYhyVwkB5a4Sm1Yt8iBuxhqavSOpB7ge2Aj8h5qXvgjcBjxeE7sReDQiTgMvSDoCLJX0IjAzIvak93wI6AN2TPIzmFlO+Urj/Gn0TP9uKsn99WpA0kpgMCKeGbFvGXip5vnRFCun7ZHxUSStkzQgaWBoaKjBJpqZ2UQmTPqSbgBORMT+mtivAXcCn613SJ1YjBMfHYy4PyKWRMSS7u7uiZpoZmYNaqS8sxxYKek64EJgJvA/gfnAM2kstgf4nqSlVM7g59Yc3wMcS/GeOnEzM2uTCc/0I6I/InoiYh6VAdpdEfEvI+LiiJiX4keBqyLiZWA7sFrSDEnzqQzY7ouI48ApScvSrJ01vHUswMzMWmzKl2GIiEOStgDPAmeBmyOielneeuBBoERlANeDuAXk9VjMstNU0o+I3cDuOvF5I55vpDLTZ+R+A8AVzfxM6yxej8UsW74i19rK67GYZctJ39rK67GYZctJ39rK67GYZctJ39rK67GYZcs3UbG2qg7WevaOWTac9K3tvB6LWXZc3jEzKxAnfTOzAnHSNzMrECd9M7MCcdI3MysQJ30zswJx0jczKxAnfTOzAnHSNzMrECd9M7MCcdI3MysQJ30zswJx0jczKxAnfTOzAnHSNzMrECd9M7MC8U1UrNC2HRj0XbysUJz0rbC2HRikf+tBhs+cA2Dw5DD9Ww8COPFbx2q4vCNpmqQDkp5IzzdL+qGk70t6TFJXzb79ko5IOiyptyZ+taSD6bV7JGlKP41ZEzbvPPxGwq8aPnOOzTsPZ9Qis9ZrpqZ/C/BczfOngCsi4reAHwH9AJIuB1YDC4EVwL2SpqVj7gPWAZemx4pJtd5sEo6dHG4qbtYJGkr6knqA64EHqrGIeDIizqane4GetH0j8GhEnI6IF4AjwFJJs4GZEbEnIgJ4COibmo9h1rw5XaWm4madoNEz/buB24DXx3j9k8COtF0GXqp57WiKldP2yPgoktZJGpA0MDQ01GATzZqzoXcBpenT3hIrTZ/Ght4FGbXIrPUmTPqSbgBORMT+MV6/EzgLPFIN1dktxomPDkbcHxFLImJJd3f3RE00Oy99i8tsWrWIclcJAeWuEptWLfIgrnW0RmbvLAdWSroOuBCYKenhiLhJ0lrgBuAjqWQDlTP4uTXH9wDHUrynTtwsM32Ly07yVigTnulHRH9E9ETEPCoDtLtSwl8B3A6sjIhf1hyyHVgtaYak+VQGbPdFxHHglKRladbOGuDxqf5AZmY2tsnM0/9LYAbwVJp5uTciPhURhyRtAZ6lUva5OSKq8+LWAw8CJSpjADtGvauZmbVMU0k/InYDu9P2B8fZbyOwsU58ALiiqRaamdmU8do7ZmYF4qRvZlYgTvpmZgXipG9mViBO+mZmBeKkb2ZWIE76ZmYF4qRvZlYgTvpmZgXipG9mViBO+mZmBeKkb2ZWIE76ZmYF4qRvZlYgTvpmZgXipG9mViBO+mZmBeKkb2ZWIE76ZmYF4qRvZlYgTvpmZgVyQdYNMLN82XZgkM07D3Ps5DBzukps6F1A3+Jy1s2yKeKkb2Zv2HZgkP6tBxk+cw6AwZPD9G89CODE3yEaLu9ImibpgKQn0vNfl/SUpOfTv++p2bdf0hFJhyX11sSvlnQwvXaPJE3txzGzydi88/AbCb9q+Mw5Nu88nFGLbKo1U9O/BXiu5vkdwLci4lLgW+k5ki4HVgMLgRXAvZKmpWPuA9YBl6bHikm13sym1LGTw03F7e2noaQvqQe4HnigJnwj8JW0/RWgryb+aEScjogXgCPAUkmzgZkRsSciAnio5hgzy4E5XaWm4vb20+iZ/t3AbcDrNbFLIuI4QPr34hQvAy/V7Hc0xcppe2R8FEnrJA1IGhgaGmqwiWY2WRt6F1CaPu0tsdL0aWzoXZBRi2yqTZj0Jd0AnIiI/Q2+Z706fYwTHx2MuD8ilkTEku7u7gZ/rJlNVt/iMptWLaLcVUJAuavEplWLPIjbQRqZvbMcWCnpOuBCYKakh4FXJM2OiOOpdHMi7X8UmFtzfA9wLMV76sTNLEf6Fped5DvYhGf6EdEfET0RMY/KAO2uiLgJ2A6sTbutBR5P29uB1ZJmSJpPZcB2XyoBnZK0LM3aWVNzjJmZtcFk5unfBWyR9EfAT4F/BRARhyRtAZ4FzgI3R0R1Dth64EGgBOxIDzMza5Omkn5E7AZ2p+2fAR8ZY7+NwMY68QHgimYbaWZmU8Nr75iZFYiTvplZgahynVR+SRoC/iHrdkyBWcCrWTciZ9wno7lP6nO/jDZRn7w/IkbNec990u8UkgYiYknW7cgT98lo7pP63C+jnW+fuLxjZlYgTvpmZgXipN8+92fdgBxyn4zmPqnP/TLaefWJa/pmZgXiM30zswJx0jczKxAn/Skmaa6k/yPpOUmHJN2S4mPeXrLTjdMnmyX9UNL3JT0mqSvjprbVWP1S8/pnJIWkWVm1sd3G6xNJf5puwXpI0uezbGc7jfP/z5WS9kp6Ot1/ZGlDbxgRfkzhA5gNXJW2LwJ+BFwOfB64I8XvAD6XdVtz0CcfAy5I8c8VqU/G65f0fC6wk8qFibOybmvWfQJcA3wTmJFeuzjrtuagT54EPp7i1wG7G3k/n+lPsYg4HhHfS9unqNxXuMzYt5fseGP1SUQ8GRFn0257eev9FjreOL8rAF+kcre6Qs20GKdP1gN3RcTp9NqJsd+ls4zTJwHMTLu9mwbvT+Kk30KS5gGLge8y9u0lC2VEn9T6JAVearu2XyStBAYj4plsW5WtEb8rlwEflvRdSX8n6bczbVxGRvTJp4HNkl4CvgD0N/IeTvotIuldwP8GPh0RP8+6PXkwVp9IupPKvRceyaptWartFyr9cCfw2SzblLU6vysXAO8BlgEbqNzLo94tWDtWnT5ZD9waEXOBW4EvNfI+TvotIGk6lf84j0TE1hR+Jd1WkhG3lyyEMfoESWuBG4BPRCpOFkmdfvkAMB94RtKLVEpe35P03uxa2V5j/K4cBbZGxT7gdSoLjhXCGH2yFqhufw1oaCDXSX+KpbOPLwHPRcSf17w01u0lO95YfSJpBXA7sDIifplV+7JSr18i4mBEXBwR86Jyi9KjVAbxXs6wqW0zzv8/24Br0z6XAe+gIKtujtMnx4DfT9vXAs839H4FPLlqKUm/C/w9cJDK2QjAf6RSg9sCvI90e8mI+MdMGtlm4/TJPcAM4GcptjciPtX+FmZjrH6JiK/X7PMisCQiipLgxvpd+SbwZeBK4FfAZyJiVxZtbLdx+uTnwF9QKX29Bvy7iNg/4fs56ZuZFYfLO2ZmBeKkb2ZWIE76ZmYF4qRvZlYgTvpmZgXipG9mViBO+mZmBfL/ATKSq3Z5L7p4AAAAAElFTkSuQmCC
+"
+>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[108]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">venues</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">dfpro</span><span class="o">.</span><span class="n">venue</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">dfam</span><span class="o">.</span><span class="n">venue</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">dfpro</span><span class="o">.</span><span class="n">venue</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dfam</span><span class="o">.</span><span class="n">venue</span><span class="o">.</span><span class="n">unique</span><span class="p">()])</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">dfam</span><span class="o">.</span><span class="n">venue</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dfpro</span><span class="o">.</span><span class="n">venue</span><span class="o">.</span><span class="n">unique</span><span class="p">()])</span>
 </pre></div>
 
     </div>
@@ -14561,11 +14810,8 @@ Name: short, dtype: float64
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
--2147483648    624794
- 2010            2217
- 2011            3520
-Name: konayear, dtype: int64
+<pre>[]
+[&#39;maryland&#39;, &#39;santa rosa&#39;]
 </pre>
 </div>
 </div>
@@ -14576,13 +14822,85 @@ Name: konayear, dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[116]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># idea - use ag swim times to first-difference pro swim times, then look at differences around cutoff</span>
+<span class="n">dfprom</span> <span class="o">=</span> <span class="n">dfam</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">dfprom</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;venue&#39;</span><span class="p">,</span> <span class="s1">&#39;swimtime_am&#39;</span><span class="p">,</span> <span class="s1">&#39;biketime_am&#39;</span><span class="p">,</span> <span class="s1">&#39;fin_swim_am&#39;</span><span class="p">]</span>
+<span class="n">dfprom</span> <span class="o">=</span> <span class="n">dfpro</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">dfprom</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;venue&#39;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="n">dfprom</span><span class="p">[</span><span class="s1">&#39;swim_diff&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dfprom</span><span class="o">.</span><span class="n">swimtime</span> <span class="o">-</span> <span class="n">dfprom</span><span class="o">.</span><span class="n">swimtime_am</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">dfprom</span><span class="o">.</span><span class="n">avg_water_temp</span><span class="p">,</span> <span class="n">dfprom</span><span class="o">.</span><span class="n">swim_diff</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Pro minus Amateur&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">21.9</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[115]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">dfprom</span><span class="o">.</span><span class="n">swimtime</span><span class="p">,</span> <span class="n">dfprom</span><span class="o">.</span><span class="n">swimtime_am</span><span class="p">)</span>
+<span class="n">m</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">dfprom</span><span class="o">.</span><span class="n">swimtime</span><span class="p">,</span> <span class="n">dfprom</span><span class="o">.</span><span class="n">swimtime_am</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2800</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Pro swim time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Amateur swim time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -14622,7 +14940,7 @@ Name: konayear, dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load df with slots per ag per race</span>
@@ -14634,271 +14952,10 @@ Name: konayear, dtype: int64
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>konayear</th>
-      <th>raceid</th>
-      <th>racename</th>
-      <th>F18-24</th>
-      <th>F25-29</th>
-      <th>F30-34</th>
-      <th>F35-39</th>
-      <th>F40-44</th>
-      <th>F45-49</th>
-      <th>F50-54</th>
-      <th>F55-59</th>
-      <th>F60-64</th>
-      <th>F65-69</th>
-      <th>F70-74</th>
-      <th>F75-79</th>
-      <th>F80+</th>
-      <th>FPC</th>
-      <th>FPRO</th>
-      <th>M18-24</th>
-      <th>M25-29</th>
-      <th>M30-34</th>
-      <th>M35-39</th>
-      <th>M40-44</th>
-      <th>M45-49</th>
-      <th>M50-54</th>
-      <th>M55-59</th>
-      <th>M60-64</th>
-      <th>M65-69</th>
-      <th>M70-74</th>
-      <th>M75-79</th>
-      <th>M80+</th>
-      <th>M80-84</th>
-      <th>MPC</th>
-      <th>MPRO</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2018</td>
-      <td>415</td>
-      <td>Ironman Argentina 2017</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>5</td>
-      <td>5</td>
-      <td>5</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2019</td>
-      <td>465</td>
-      <td>Ironman Argentina 2018</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>2</td>
-      <td>3</td>
-      <td>7</td>
-      <td>12</td>
-      <td>13</td>
-      <td>11</td>
-      <td>7</td>
-      <td>4</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2013</td>
-      <td>1</td>
-      <td>Ironman Arizona 2012</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-      <td>4</td>
-      <td>3</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2014</td>
-      <td>225</td>
-      <td>Ironman Arizona 2013</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>3</td>
-      <td>3</td>
-      <td>4</td>
-      <td>6</td>
-      <td>5</td>
-      <td>4</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2015</td>
-      <td>260</td>
-      <td>Ironman Arizona 2014</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>3</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>4</td>
-      <td>5</td>
-      <td>5</td>
-      <td>3</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># merge race-specific vars, like # finishers, % finishers</span>
@@ -14941,163 +14998,10 @@ Name: konayear, dtype: int64
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[22]:</div>
-
-
-
-<div class="output_html rendered_html output_subarea output_execute_result">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>racename</th>
-      <th>venuename</th>
-      <th>seriesid</th>
-      <th>raceyear</th>
-      <th>racedate</th>
-      <th>konayear</th>
-      <th>noswim</th>
-      <th>short</th>
-      <th>swimdnf</th>
-      <th>bikednf</th>
-      <th>rundnf</th>
-      <th>dnf</th>
-      <th>dq</th>
-      <th>participants</th>
-      <th>finishers</th>
-      <th>female</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Challenge Weymouth 2014</td>
-      <td>e Weymouth</td>
-      <td>54</td>
-      <td>2014</td>
-      <td>2014-09-13</td>
-      <td>-2147483648</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.011136</td>
-      <td>0.024499</td>
-      <td>0.033408</td>
-      <td>0.069042</td>
-      <td>0.000000</td>
-      <td>449</td>
-      <td>418</td>
-      <td>0.115813</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Challenge Weymouth 2015</td>
-      <td>e Weymouth</td>
-      <td>54</td>
-      <td>2015</td>
-      <td>2015-09-12</td>
-      <td>-2147483648</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.009302</td>
-      <td>0.025581</td>
-      <td>0.037209</td>
-      <td>0.074419</td>
-      <td>0.000000</td>
-      <td>430</td>
-      <td>398</td>
-      <td>0.167442</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Ironman Argentina 2017</td>
-      <td>Argentina</td>
-      <td>63</td>
-      <td>2017</td>
-      <td>2017-12-03</td>
-      <td>-2147483648</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.007851</td>
-      <td>1019</td>
-      <td>1011</td>
-      <td>0.094210</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Ironman Argentina 2018</td>
-      <td>Argentina</td>
-      <td>63</td>
-      <td>2018</td>
-      <td>2018-12-02</td>
-      <td>-2147483648</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0.000000</td>
-      <td>0.024096</td>
-      <td>0.028916</td>
-      <td>0.053012</td>
-      <td>0.007229</td>
-      <td>830</td>
-      <td>780</td>
-      <td>0.127711</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Ironman Argentina 2019</td>
-      <td>Argentina</td>
-      <td>63</td>
-      <td>2019</td>
-      <td>2019-12-01</td>
-      <td>-2147483648</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0.003135</td>
-      <td>0.031348</td>
-      <td>0.067398</td>
-      <td>0.106583</td>
-      <td>0.003135</td>
-      <td>638</td>
-      <td>568</td>
-      <td>0.115987</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: fix this inconsistency</span>
@@ -15105,29 +15009,6 @@ Name: konayear, dtype: int64
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[24]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>Ironman Weymouth 2016      773
-Challenge Weymouth 2014    449
-Challenge Weymouth 2015    430
-Name: racename, dtype: int64</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -15167,7 +15048,7 @@ Name: racename, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># add cutoff times to dfs</span>
@@ -15196,12 +15077,44 @@ Name: racename, dtype: int64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Effect-of-wetsuits">Effect of wetsuits<a class="anchor-link" href="#Effect-of-wetsuits">&#182;</a></h2>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -15258,32 +15171,13 @@ Name: racename, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>jupyter nbconvert --output-dir<span class="o">=</span><span class="s1">&#39;../jupyter_html/&#39;</span> --to html analyze_imdata.ipynb
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>[NbConvertApp] Converting notebook analyze_imdata.ipynb to html
-[NbConvertApp] Writing 346500 bytes to ../jupyter_html/analyze_imdata.html
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
